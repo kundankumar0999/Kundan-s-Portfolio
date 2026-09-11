@@ -1,5 +1,5 @@
 // 1. Auto Typing Animation (Without heavy libraries)
-const words = ["C/C++ Programmer", "BCA Student", "Tech Enthusiast"];
+const words = ["BCA Student", "Programmer", "Fast Learner"];
 let i = 0;
 let timer;
 
@@ -86,4 +86,28 @@ cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
         card.style.transition = "none"; // Remove transition while moving
     });
+});
+
+// 4. Secret Friends Vault Password Logic
+const unlockBtn = document.getElementById('unlock-friends-btn');
+const friendsGallery = document.getElementById('friends-gallery');
+
+unlockBtn.addEventListener('click', () => {
+    // Agar pehle se khula hai toh band kar de
+    if (friendsGallery.classList.contains('friends-gallery-show')) {
+        friendsGallery.classList.remove('friends-gallery-show');
+        unlockBtn.innerHTML = '<i class="fa-solid fa-lock"></i> Friends Only Vault 🤫';
+        return;
+    }
+
+    // Password Prompt
+    const password = prompt("Dosto ka secret code daalo 🔑:");
+
+    if (password === "101") {
+        alert("Access Granted! Swagat hai dosto 😂🔥");
+        friendsGallery.classList.add('friends-gallery-show');
+        unlockBtn.innerHTML = '<i class="fa-solid fa-lock-open"></i> Vault Unlocked! (Click to hide)';
+    } else if (password !== null) {
+        alert("Galat Password! Tum hamare group ke nahi ho ❌");
+    }
 });
