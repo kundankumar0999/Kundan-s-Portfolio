@@ -249,3 +249,19 @@ section {
     font-size: 0.9rem;
     color: #cbd5e1;
 }
+
+/* GitHub button ko theek Resume ke niche lana aur size fix karna */
+.social-btn.github-btn {
+    flex-basis: 100%;      /* Isse ye zabardasti nayi line par niche chala jayega */
+    width: max-content;      /* Text ke size ke hisaab se box fail jayega */
+    min-width: 160px;        /* Box chhota nahi padega */
+    height: auto;            /* Gol cut hone se rokega */
+    padding: 10px 22px;      /* Andar space dega taaki text bahar na bhage */
+    margin: 12px auto 0;     /* Resume ke theek niche center me rakhega */
+    border-radius: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;     /* Text ko ek line me rakhega */
+}
