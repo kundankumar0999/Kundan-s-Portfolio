@@ -103,7 +103,7 @@ unlockBtn.addEventListener('click', () => {
     // Password Prompt
     const password = prompt("Dosto ka secret code daalo 🔑:");
 
-    if (password === "101") {
+    if (password === "7070") {
         alert("Access Granted! Swagat hai dosto 😂🔥");
         friendsGallery.classList.add('friends-gallery-show');
         unlockBtn.innerHTML = '<i class="fa-solid fa-lock-open"></i> Vault Unlocked! (Click to hide)';
